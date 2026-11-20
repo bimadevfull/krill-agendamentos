@@ -1,0 +1,23 @@
+@layer theme, base, primevue;
+@import "tailwindcss";
+
+:root {
+  --krill-ink: #0a2472;
+  --krill-yellow: #f7b500;
+  --krill-red: #d71920;
+  --krill-paper: #f4f5f7;
+  --krill-ok: #2f855a;
+  --krill-warn: #d98e04;
+  --krill-over: #c0392b;
+}
+
+body {
+  margin: 0;
+  background: var(--krill-paper);
+  color: #1f2933;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
