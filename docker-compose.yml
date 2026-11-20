@@ -1,0 +1,63 @@
+services:
+  db:
+    image: mysql:8.0
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_DATABASE: krill
+      MYSQL_USER: krill
+      MYSQL_PASSWORD: krill
+      MYSQL_ROOT_PASSWORD: krill-root
+    ports:
+      # porta 3307 no seu PC para nao conflitar com um MySQL local na 3306
+      - "3307:3306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -pkrill-root --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+  mailpit:
+    # Caixa de e-mail de testes: SMTP na porta 1025, interface em http://localhost:8025
+    image: axllent/mailpit
+    ports:
+      - "8025:8025"
+
+  backend:
+    build: ./backend
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: krill
+      DB_USER: krill
+      DB_PASSWORD: krill
+      MAIL_HOST: mailpit
+      MAIL_PORT: 1025
+      JWT_SECRET: troque-este-segredo-em-producao-0123456789
+      JAVA_TOOL_OPTIONS: "-Duser.timezone=America/Sao_Paulo"
+    depends_on:
+      db:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      backend:
+        condition: service_started
+    ports:
+      - "3000:80"
+
+volumes:
+  mysqldata:
