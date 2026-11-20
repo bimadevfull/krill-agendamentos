@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: agendamentos
+  datasource:
+    url: "jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:krill}?useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8&serverTimezone=America/Sao_Paulo"
+    username: ${DB_USER:krill}
+    password: ${DB_PASSWORD:krill}
+  jpa:
+    open-in-view: false
+    hibernate:
+      # O esquema e gerenciado pelo Flyway (db/migration)
+      ddl-auto: none
+  flyway:
+    enabled: true
+  mail:
+    host: ${MAIL_HOST:localhost}
+    port: ${MAIL_PORT:1025}
+    username: ${MAIL_USER:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail.smtp.auth: ${MAIL_AUTH:false}
+      mail.smtp.starttls.enable: ${MAIL_STARTTLS:false}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+app:
+  jwt:
+    # Troque em producao (minimo 32 caracteres)
+    secret: ${JWT_SECRET:troque-este-segredo-em-producao-0123456789}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:480}
+  mail:
+    from: ${MAIL_FROM:agendamentos@redekrill.com.br}
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:3000}
+  seed:
+    admin-email: ${SEED_ADMIN_EMAIL:admin@krill.com}
+    admin-senha: ${SEED_ADMIN_SENHA:admin123}
+    comum-email: ${SEED_COMUM_EMAIL:usuario@krill.com}
+    comum-senha: ${SEED_COMUM_SENHA:usuario123}
