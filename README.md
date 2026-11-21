@@ -12,6 +12,19 @@ ocupação por **dia** e por **faixa horária**. Frontend e backend são separad
 ### Login
 ![Tela de login](docs/img/login.png)
 
+### Agendamentos
+Lista de agendamentos com filtro por período e situação. Mostra data, faixa, pedido, fornecedor, e-mail, caminhão,
+paletização, quantidade de pallets, situação e quem criou. O botão **Novo agendamento** abre o formulário de cadastro,
+e agendamentos ativos podem ser cancelados.
+
+![Lista de agendamentos](docs/img/agendamentos.png)
+
+### E-mail de confirmação enviado ao fornecedor
+Ao salvar um agendamento, o sistema envia ao e-mail do fornecedor a confirmação com os dados do agendamento. Em
+desenvolvimento, as mensagens são recebidas pelo Mailpit (http://localhost:8025).
+
+![E-mails de confirmação no Mailpit](docs/img/email-fornecedor.png)
+
 ## Stack
 
 | Camada | Tecnologia |
