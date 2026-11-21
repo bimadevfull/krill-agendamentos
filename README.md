@@ -5,11 +5,11 @@ ocupação por **dia** e por **faixa horária**. Frontend e backend são separad
 
 **Autor:** Abimaeel de Menezes Pedro
 
-abimael commit dia 21/11 03;34 Projeto desenvolvido como desafio técnico de processo seletivo. Não é um produto oficial da Rede Krill e não tem vínculo com a rede krill; o nome é usado apenas para identificar o desafio.
+> Projeto desenvolvido como desafio técnico de processo seletivo. Não é um produto oficial da Rede Krill e não tem vínculo com a empresa; o nome é usado apenas para identificar o desafio.
 
 ## Telas do sistema
 
-###
+### Login
 ![Tela de login](docs/img/login.png)
 
 ## Stack
