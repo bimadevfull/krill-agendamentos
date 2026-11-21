@@ -28,7 +28,7 @@ ocupação por **dia** e por **faixa horária**. Frontend e backend são separad
 Pré-requisito: Docker Desktop (ou Docker Engine + Compose v2).
 
 ```bash
-git clone <URL-DO-REPOSITORIO>
+git clone https://github.com/bimadevfull/krill-agendamentos.git
 cd krill-agendamentos
 docker compose up --build
 ```
