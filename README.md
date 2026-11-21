@@ -104,6 +104,17 @@ npm audit
 Dica: a primeira execução do Dependency-Check baixa a base NVD e pode demorar. Uma chave de API gratuita da NVD
 (`-DnvdApiKey=...`) acelera bastante.
 
+### Resultados obtidos
+
+| Verificação | Resultado |
+|---|---|
+| Testes do backend (`mvn clean verify`) | 50 testes, 0 falhas |
+| Cobertura de linhas nas 3 classes críticas | 100% (meta: 80%) |
+| Cobertura de linhas do projeto inteiro | 49,6% (a regra de 80% vale para o domínio crítico) |
+| Testes do frontend (Vitest) | 9 testes, todos passando |
+| `npm audit` (dependências de produção) | 0 vulnerabilidades |
+| OWASP Dependency-Check (backend) | 71 dependências analisadas, 19 com vulnerabilidades conhecidas, a maioria em bibliotecas do Spring Boot 3.3.5 e no swagger-ui |
+
 ## Regras de negócio implementadas
 
 - **480 pallets por dia** e **120 pallets por faixa**: excedê-los **não bloqueia** o cadastro; a API devolve `avisos`
@@ -183,6 +194,13 @@ login e falhas de login são registrados no `AuthService`.
 - Excelente suporte no Spring Data JPA e no Flyway, e imagem oficial para Docker, o que simplifica a execução local.
 - Esquema versionado com **Flyway** (`backend/src/main/resources/db/migration`), com charset `utf8mb4`
   para acentuação correta.
+
+## Limitações conhecidas e próximos passos
+
+- Atualizar o Spring Boot 3.3.x para a versão mais recente da série 3, para reduzir os achados do OWASP Dependency-Check.
+- Aumentar a cobertura de testes fora do núcleo do domínio (controllers, filtros e camada de infraestrutura).
+- Adicionar *refresh token*; hoje o token JWT tem validade fixa e o usuário precisa entrar de novo ao expirar.
+- Os limites de 480 pallets/dia e 120 pallets/faixa geram apenas aviso, conforme o enunciado, e não bloqueiam o cadastro.
 
 ## Estrutura do repositório
 
