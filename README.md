@@ -9,7 +9,7 @@ abimael commit dia 22/11 03;34 Projeto desenvolvido como desafio técnico de pro
 
 ## Telas do sistema
 
-### Login
+###
 ![Tela de login](docs/img/login.png)
 
 ## Stack
