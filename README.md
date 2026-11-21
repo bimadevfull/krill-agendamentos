@@ -1,4 +1,4 @@
-# Agendamento de Recebimento – Rede Krill
+# Agendamento de Recebimento – Teste dev Jr Rede Krill
 
 Aplicação web para cadastrar, consultar, acompanhar e cancelar agendamentos de caminhões, com visibilidade da
 ocupação por **dia** e por **faixa horária**. Frontend e backend são separados e conversam **somente por API REST**.
