@@ -108,9 +108,9 @@ Dica: a primeira execução do Dependency-Check baixa a base NVD e pode demorar.
 
 | Verificação | Resultado |
 |---|---|
-| Testes do backend (`mvn clean verify`) | 50 testes, 0 falhas |
+| Testes do backend (`mvn clean verify`) | 66 testes, 0 falhas |
 | Cobertura de linhas nas 3 classes críticas | 100% (meta: 80%) |
-| Cobertura de linhas do projeto inteiro | 49,6% (a regra de 80% vale para o domínio crítico) |
+| Cobertura de linhas do projeto inteiro | 60,0% (a regra de 80% vale para o domínio crítico) |
 | Testes do frontend (Vitest) | 9 testes, todos passando |
 | `npm audit` (dependências de produção) | 0 vulnerabilidades |
 | OWASP Dependency-Check (backend) | 71 dependências analisadas, 19 com vulnerabilidades conhecidas, a maioria em bibliotecas do Spring Boot 3.3.5 e no swagger-ui |
