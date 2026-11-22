@@ -3,9 +3,11 @@
 Aplicação web para cadastrar, consultar, acompanhar e cancelar agendamentos de caminhões, com visibilidade da
 ocupação por **dia** e por **faixa horária**. Frontend e backend são separados e conversam **somente por API REST**.
 
-**Autor:** Abimaeel de Menezes Pedro
+**Autor:** Abimael de Menezes Pedro
 
-desenvolvido como desafio técnico de processo seletivo. Não é um produto oficial da Rede Krill e não tem vínculo com a empresa; o nome é usado apenas para identificar o teste tecnico
+**Vídeo de demonstração:** [Desafio Dev Rede Krill - Agendamento de Recebimento - Abimael de Menezes Pedro](https://youtu.be/JRxxY-QmbSY)
+
+Desenvolvido como desafio técnico de processo seletivo. Não é um produto oficial da Rede Krill e não tem vínculo com a empresa; o nome é usado apenas para identificar o teste técnico.
 
 ## Telas do sistema
 
@@ -224,8 +226,3 @@ krill-agendamentos/
 ├── docker-compose.yml  # db (MySQL) + mailpit + backend + frontend
 └── README.md
 ```
-**Autor:** Abimael de Menezes Pedro
-
-**Vídeo de demonstração:** [Desafio Dev Rede Krill - Agendamento de Recebimento - Abimael de Menezes Pedro](https://youtu.be/7UoYlbBNfWo)
-
-Desenvolvido como desafio técnico de processo seletivo. Não é um produto oficial da Rede Krill e não tem vínculo com a empresa; o nome é usado apenas para identificar o teste técnico.
