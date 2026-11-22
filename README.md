@@ -224,3 +224,8 @@ krill-agendamentos/
 ├── docker-compose.yml  # db (MySQL) + mailpit + backend + frontend
 └── README.md
 ```
+**Autor:** Abimael de Menezes Pedro
+
+**Vídeo de demonstração:** [Desafio Dev Rede Krill - Agendamento de Recebimento - Abimael de Menezes Pedro](https://youtu.be/7UoYlbBNfWo)
+
+Desenvolvido como desafio técnico de processo seletivo. Não é um produto oficial da Rede Krill e não tem vínculo com a empresa; o nome é usado apenas para identificar o teste técnico.
