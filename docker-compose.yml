@@ -8,7 +8,7 @@ services:
       MYSQL_PASSWORD: krill
       MYSQL_ROOT_PASSWORD: krill-root
     ports:
-      # porta 3307 no seu PC para nao conflitar com um MySQL local na 3306
+      # porta 3307 no  PC para nao conflitar com um MySQL local na 3306
       - "3307:3306"
     volumes:
       - mysqldata:/var/lib/mysql
