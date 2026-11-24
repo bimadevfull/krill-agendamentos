@@ -7,7 +7,6 @@ ocupação por **dia** e por **faixa horária**. Frontend e backend são separad
 
 **Vídeo de demonstração:** [Desafio Dev Rede Krill - Agendamento de Recebimento - Abimael de Menezes Pedro](https://youtu.be/JRxxY-QmbSY)
 
-Desenvolvido como desafio técnico de processo seletivo. Não é um produto oficial da Rede Krill e não tem vínculo com a empresa; o nome é usado apenas para identificar o teste técnico.
 
 ## Telas do sistema
 
